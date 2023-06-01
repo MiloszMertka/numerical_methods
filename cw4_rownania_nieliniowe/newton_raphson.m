@@ -22,7 +22,7 @@ function [results] = newton_raphson(f, a, b, e, dx, diff_method)
             case "central"
                 prev_x = x - dx;
                 next_x = x + dx;
-                dfx = (f(next_x) - f(prev_x)) / dx;
+                dfx = (f(next_x) - f(prev_x)) / (2 * dx);
             otherwise
                 disp("Wrong diff method");
                 return;
